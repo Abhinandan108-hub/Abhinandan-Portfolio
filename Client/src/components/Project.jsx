@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import ExpenseImg from '../assets/expense-management.jpg';
 import RealEstateImg from '../assets/real-estate.jpg';
-import FlowerImg from '../assets/flower.jpg';
+import FlowerImg from '../assets/Flower.jpg';
 import CarImg from '../assets/car.jpg';
 import FurnitureImg from '../assets/furniture.jpg';
 import GroceryImg from '../assets/grocery.jpg';
