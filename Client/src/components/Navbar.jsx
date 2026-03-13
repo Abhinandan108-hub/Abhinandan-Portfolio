@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { MoreVertical, X } from "lucide-react";
-import devImg from "../assets/dev.png";
+import devImg from "../assets/Dev.png";
 
 const navItems = [
   { name: "HOME", href: "#home" },
