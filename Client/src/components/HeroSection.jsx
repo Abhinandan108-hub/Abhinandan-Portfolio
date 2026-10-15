@@ -40,7 +40,7 @@ const HeroSection = () => {
 
 <section
 id="home"
-className="relative w-full min-h-[115vh] flex items-center overflow-hidden pt-24"
+className="relative w-full min-h-[100svh] md:min-h-[115vh] flex items-center overflow-hidden pt-24"
 >
 
 {/* BACKGROUND */}
@@ -61,22 +61,22 @@ style={{backgroundImage:`url(${s.image})`}}
 
 {/* MAIN CONTENT */}
 
-<div className="relative z-10 w-full px-[140px]">
+<div className="relative z-10 w-full px-4 sm:px-6 md:px-10 lg:px-12 xl:px-20 2xl:px-[140px]">
 
-<div className="grid lg:grid-cols-2 items-center gap-16">
+<div className="grid xl:grid-cols-2 items-center gap-8 lg:gap-12 2xl:gap-16">
 
 {/* LEFT TEXT */}
 <div>
 
-<p className="text-indigo-400 tracking-widest uppercase mb-6 text-xl font-semibold">
+<p className="text-indigo-400 tracking-widest uppercase mb-4 sm:mb-6 text-xs sm:text-base lg:text-xl font-semibold">
 {slide.subtitle}
 </p>
 
 <h1 className="text-white font-extrabold leading-tight
-text-6xl
-sm:text-7xl
-lg:text-8xl
-xl:text-[92px]
+text-4xl
+sm:text-6xl
+lg:text-7xl
+2xl:text-[92px]
 ">
 
 {slide.title}
@@ -87,11 +87,11 @@ xl:text-[92px]
 
 </h1>
 
-<div className="flex gap-6 mt-12">
+<div className="flex flex-col sm:flex-row gap-3 sm:gap-6 mt-8 sm:mt-12">
 
 <button className="
-px-12 py-5
-text-xl font-bold
+px-6 sm:px-8 2xl:px-12 py-4 sm:py-5
+text-base sm:text-lg 2xl:text-xl font-bold
 bg-indigo-600
 rounded-lg
 transition-all duration-300
@@ -103,8 +103,8 @@ Hire Me
 </button>
 
 <button className="
-px-12 py-5
-text-xl font-bold
+px-6 sm:px-8 2xl:px-12 py-4 sm:py-5
+text-base sm:text-lg 2xl:text-xl font-bold
 bg-indigo-600
 rounded-lg
 transition-all duration-300
@@ -126,10 +126,11 @@ Download CV
 <div
 className="
 relative
-w-[420px] h-[420px]
-sm:w-[520px] sm:h-[520px]
-lg:w-[500px] h-[300px]
-xl:w-[750px] xl:h-[750px]
+w-[min(85vw,420px)] h-[min(85vw,420px)]
+sm:w-[min(72vw,520px)] sm:h-[min(72vw,520px)]
+lg:w-[420px] lg:h-[420px]
+xl:w-[520px] xl:h-[520px]
+2xl:w-[750px] 2xl:h-[750px]
 overflow-hidden
 rounded-full
 border-4 border-white

@@ -56,7 +56,7 @@ const App = () => {
             onClick={() => handleCardClick(card.id)}
             className={`
               relative 
-              w-[260px] h-[420px] 
+              w-[min(240px,80vw)] h-[380px] 
               sm:w-[320px] sm:h-[500px] 
               lg:w-[360px] lg:h-[560px]
               bg-white rounded-[2rem] overflow-hidden
@@ -64,11 +64,11 @@ const App = () => {
               cursor-pointer
               ${
                 card.id === clickedCardId
-                  ? "scale-105 ring-4 ring-indigo-500"
-                  : "hover:rotate-0 hover:scale-105"
+                  ? "sm:scale-105 ring-4 ring-indigo-500"
+                  : "sm:hover:rotate-0 sm:hover:scale-105"
               }
               transition-all duration-300 ease-in-out
-              ${index === 0 ? "ml-0" : "-ml-10 md:-ml-14 lg:-ml-16"}
+              ${index === 0 ? "ml-0" : "sm:-ml-10 md:-ml-14 lg:-ml-14"}
             `}
             style={{
               zIndex: getZIndex(card.id, defaultZIndex),
@@ -109,15 +109,15 @@ const App = () => {
   return (
     <section
   id="services"
-  className="min-h-screen bg-gray-100 flex flex-col items-center py-16 px-2"
+  className="min-h-screen bg-gray-100 flex flex-col items-center py-12 sm:py-16 px-2"
 >
       {/* Heading */}
-      <div className="text-center mb-20">
-        <h1 className="text-6xl sm:text-9xl font-extrabold text-gray-900 mb-4">
+      <div className="text-center mb-12 sm:mb-20 px-3 sm:px-6">
+        <h1 className="text-4xl sm:text-6xl lg:text-8xl 2xl:text-9xl font-extrabold text-gray-900 mb-4">
           Our Services
         </h1>
 
-        <p className="text-xl sm:text-2xl text-gray-800 max-w-7xl mx-auto leading-relaxed text-center">
+        <p className="text-base sm:text-xl 2xl:text-2xl text-gray-800 max-w-7xl mx-auto leading-relaxed text-center">
   I build scalable full-stack web applications using modern technologies
   like React, Node.js, and MongoDB, focusing on performance and user
   experience. I also develop intelligent solutions with Machine Learning

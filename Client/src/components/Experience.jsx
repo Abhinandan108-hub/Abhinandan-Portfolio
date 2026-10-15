@@ -21,25 +21,25 @@ const Experience = () => {
   return (
     <section 
       id="experience"  // <-- Add this for navbar scroll
-      className="min-h-screen bg-white text-gray-900 flex flex-col items-center p-8 py-20 font-sans scroll-smooth"
+      className="min-h-screen bg-white text-gray-900 flex flex-col items-center p-4 sm:p-8 py-16 sm:py-20 font-sans scroll-smooth"
     >
       
       {/* Centered Heading and Subheading */}
-      <div className="text-center mb-16 max-w-7xl mx-auto">
+      <div className="text-center mb-12 sm:mb-16 max-w-7xl mx-auto">
         {/* Subheading */}
-        <p className="text-7xl font-extrabold uppercase tracking-widest text-teal-500 mb-5">
+        <p className="text-2xl sm:text-4xl lg:text-6xl 2xl:text-7xl font-extrabold uppercase tracking-widest text-teal-500 mb-5">
           WORK EXPERIENCE
         </p>
         {/* Main Heading */}
-        <h1 className="text-6xl md:text-7xl font-extrabold text-gray-900">
+        <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-gray-900">
           Companies I have worked <br className="hidden sm:inline" />for in the past.
         </h1>
       </div>
 
       {/* Experience Grid (2 Columns) */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-6xl w-full">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-8 lg:gap-12 max-w-6xl w-full">
         {experienceData.map((exp) => (
-          <div key={exp.id} className="p-6">
+          <div key={exp.id} className="p-3 sm:p-6">
             
             {/* Serial Number */}
             <h2 className="text-8xl md:text-9xl font-bold text-gray-800 mb-6">

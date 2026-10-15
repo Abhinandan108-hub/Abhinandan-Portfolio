@@ -57,9 +57,9 @@ const Navbar = () => {
         href="#home"
         className="
         fixed z-50
-        left-10 top-2
-        sm:left-5 sm:top-2
-        lg:left-10 lg:-top-10
+        left-3 top-2
+        sm:left-5
+        lg:left-6
         "
       >
         <img
@@ -70,7 +70,8 @@ const Navbar = () => {
           transition-transform duration-300 hover:scale-110
           h-12 w-12
           sm:h-16 sm:w-16
-          lg:h-60 lg:w-60
+          lg:h-20 lg:w-20
+          2xl:h-28 2xl:w-28
           "
         />
       </a>
@@ -80,23 +81,22 @@ const Navbar = () => {
         className="
         fixed z-40
         top-3 sm:top-4
-        left-1/2 -translate-x-[45%] lg:-translate-x-[35%]
-        pl-4 sm:pl-10 lg:pl-20
-        w-[96%] sm:w-[98%] lg:w-[99%]
+        left-1/2 -translate-x-1/2
+        w-full px-3 sm:px-5 lg:px-8
         max-w-[1800px]
         "
       >
         <div className="flex items-center justify-center h-14 sm:h-16 lg:h-20">
           
           {/* Desktop Menu */}
-          <div className="hidden lg:flex items-center space-x-12">
+          <div className="hidden 2xl:flex items-center space-x-4 2xl:space-x-8">
             {navItems.map((item) => (
               <a
                 key={item.name}
                 href={item.href}
                 onClick={() => setActive(item.name)}
                 className={`
-                relative text-2xl font-semibold tracking-wider
+                relative text-base 2xl:text-xl font-semibold tracking-wider
                 transition-all duration-300
                 ${
                   active === item.name
@@ -121,9 +121,9 @@ const Navbar = () => {
             <a
               href="/cv.pdf"
               className="
-              px-8 py-3 rounded-xl
+              px-4 2xl:px-8 py-3 rounded-xl
               bg-gradient-to-r from-indigo-600 to-purple-600
-              text-white text-xl font-bold
+              text-white text-base 2xl:text-xl font-bold
               shadow-lg shadow-indigo-900/40
               transition-all duration-300
               hover:scale-110 hover:shadow-indigo-500/40
@@ -135,7 +135,7 @@ const Navbar = () => {
         </div>
 
         {/* 3 Dot Button (Mobile / Tablet) */}
-        <div className="absolute right-3 sm:right-5 top-1/2 -translate-y-1/2 lg:hidden">
+        <div className="absolute right-3 sm:right-5 top-1/2 -translate-y-1/2 2xl:hidden">
           <button
             onClick={() => setIsOpen(!isOpen)}
             className="
@@ -155,7 +155,7 @@ const Navbar = () => {
         {/* Mobile / Tablet Menu */}
         <div
           className={`
-          lg:hidden overflow-hidden
+          2xl:hidden overflow-hidden
           transition-all duration-500 ease-in-out
           ${isOpen ? "max-h-[700px] opacity-100" : "max-h-0 opacity-0"}
           `}

@@ -89,7 +89,7 @@ const SkillsSection = () => {
         <section id="skills" className="py-20 md:py-28 bg-gray-900">
             <div className="container mx-auto px-6 lg:px-8 max-w-[2000px] text-center">
                 
-                <h2 className="text-8xl font-extrabold text-amber-50 mb-6 pb-3">
+                <h2 className="text-4xl sm:text-5xl lg:text-7xl xl:text-8xl font-extrabold text-amber-50 mb-6 pb-3">
                     Technical Skills
                 </h2>
 
@@ -98,16 +98,16 @@ const SkillsSection = () => {
                 </p>
 
                 {/* GRID FIXED */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-12">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 sm:gap-6 lg:gap-8 xl:gap-12">
 
                     {skills.map((skill, index) => (
                         <div 
                             key={index} 
-                            className="flex flex-col items-center p-12 bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 border border-gray-100 min-h-[380px]"
+                            className="flex min-w-0 flex-col items-center p-6 sm:p-8 xl:p-12 bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 border border-gray-100 min-h-[320px] xl:min-h-[380px]"
                         >
                             
                             {/* ICON */}
-                            <div className="w-44 h-44 mb-6 flex items-center justify-center">
+                            <div className="w-28 h-28 sm:w-36 sm:h-36 xl:w-44 xl:h-44 mb-6 flex items-center justify-center">
                                 {skill.iconUrl ? (
                                     <img
                                         src={skill.iconUrl}
@@ -122,8 +122,8 @@ const SkillsSection = () => {
                             </div>
 
                             {/* NAME + LEVEL */}
-                            <div className="flex items-center justify-center mb-3">
-                                <h3 className="text-2xl font-bold text-gray-900 mr-2">
+                            <div className="flex flex-wrap items-center justify-center gap-2 mb-3">
+                                <h3 className="text-lg lg:text-xl xl:text-2xl font-bold text-gray-900">
                                     {skill.name}
                                 </h3>
 

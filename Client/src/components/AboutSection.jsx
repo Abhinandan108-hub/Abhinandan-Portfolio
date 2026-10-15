@@ -21,15 +21,15 @@ const interests = [
 const AboutSection = () => {
     return (
 
-        <section id="about" className="py-32 bg-white">
+        <section id="about" className="py-16 sm:py-24 xl:py-32 bg-white">
 
-            <div className="mx-auto max-w-[1700px] px-10">
+            <div className="mx-auto max-w-[1700px] px-4 sm:px-6 lg:px-10">
 
-                <div className="flex flex-col lg:flex-row items-center justify-between">
+                <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-10">
 
                     {/* LEFT IMAGE */}
 
-                    <div className="w-full lg:w-[45%] flex justify-start">
+                    <div className="w-full lg:w-[42%] flex justify-center lg:justify-start shrink-0">
 
                         <div className="relative group">
 
@@ -37,8 +37,8 @@ const AboutSection = () => {
                                 src={Profile2Image}
                                 alt="Profile"
                                 className="
-                                w-[600px]
-                                h-[800px]
+                                w-full max-w-[600px]
+                                h-auto aspect-[3/4]
                                 object-cover
                                 rounded-3xl
                                 shadow-2xl
@@ -70,17 +70,17 @@ const AboutSection = () => {
 
                     {/* RIGHT CONTENT */}
 
-                    <div className="w-full lg:w-[70%] lg:ml-[200px]">
+                    <div className="w-full min-w-0 lg:w-[58%]">
 
-                        <p className="text-5xl font-extrabold tracking-widest uppercase text-indigo-600 mb-4">
+                        <p className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-extrabold tracking-widest uppercase text-indigo-600 mb-4">
                            PROFILE OVERVIEW
                         </p>
 
-                        <h2 className="text-6xl font-extrabold text-gray-900 mb-8">
+                        <h2 className="text-4xl sm:text-5xl xl:text-6xl font-extrabold text-gray-900 mb-8">
                             About Me
                         </h2>
 
-                        <p className="text-2xl text-gray-600 leading-relaxed mb-12">
+                        <p className="text-base sm:text-lg xl:text-2xl text-gray-600 leading-relaxed mb-8 xl:mb-12">
                         💻 Results-oriented Full Stack Developer experienced in building scalable, high-performance web applications using modern technologies and MERN/MEAN architectures. Skilled in Node.js backend development and creating dynamic user interfaces with React and Angular. <br />
 
 🔐 Experienced in API integration, backend architecture, authentication systems, database design, and deployment workflows, focusing on secure, efficient, production-ready solutions. <br />
@@ -92,17 +92,17 @@ const AboutSection = () => {
 
                         {/* DETAILS */}
 
-                        <div className="grid grid-cols-2 gap-x-16 gap-y-6 mb-12">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 xl:gap-x-16 gap-y-6 mb-8 xl:mb-12">
 
                             {details.map((item) => (
 
                                 <div key={item.label}>
 
-                                    <span className="text-xl text-gray-700 font-medium block">
+                                    <span className="text-base sm:text-xl text-gray-700 font-medium block">
                                         {item.label}:
                                     </span>
 
-                                    <span className="text-2xl text-gray-900 font-semibold">
+                                    <span className="text-lg sm:text-2xl text-gray-900 font-semibold break-words">
                                         {item.value}
                                     </span>
 
@@ -115,7 +115,7 @@ const AboutSection = () => {
 
                         {/* INTERESTS */}
 
-                        <div className="flex flex-wrap gap-10">
+                        <div className="flex flex-wrap gap-5 sm:gap-10">
 
                             {interests.map((item) => (
 

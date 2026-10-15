@@ -112,9 +112,9 @@ if(section) section.scrollIntoView({behavior:"smooth"})
 
 return (
 
-<section id="projects" className="min-h-[150vh] bg-gray-900 text-white flex flex-col items-center p-6 py-28 font-sans">
+<section id="projects" className="min-h-[150vh] bg-gray-900 text-white flex flex-col items-center p-4 sm:p-6 py-16 sm:py-28 font-sans">
 
-<h1 className="text-8xl font-extrabold mb-6 text-center pb-5">
+<h1 className="text-4xl sm:text-6xl lg:text-8xl font-extrabold mb-6 text-center pb-5">
 Latest <span className="text-teal-400">Projects</span>
 </h1>
 
@@ -122,12 +122,12 @@ Latest <span className="text-teal-400">Projects</span>
 I build diverse web applications ranging from full-stack MERN/MEAN projects to AI-powered and data-driven solutions, focusing on scalability, performance, and user-centric design.
 </p>
 
-<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 max-w-[1600px] w-full mx-auto">
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-8 lg:gap-12 max-w-[1600px] w-full mx-auto">
 
 {projectData.map((project)=>(
 <div
 key={project.id}
-className="relative w-full h-[500px] md:h-[520px] lg:h-[550px] rounded-xl overflow-hidden shadow-2xl group cursor-pointer bg-gray-800 transition-transform duration-300 hover:scale-[1.05]"
+className="relative w-full h-[420px] sm:h-[480px] lg:h-[550px] rounded-xl overflow-hidden shadow-2xl group cursor-pointer bg-gray-800 transition-transform duration-300 hover:scale-[1.05]"
 >
 
 <img
@@ -136,17 +136,17 @@ alt={project.title}
 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 group-hover:opacity-30"
 />
 
-<div className="absolute inset-0 bg-gray-900 bg-opacity-80 flex flex-col items-center justify-center p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+<div className="absolute inset-0 bg-gray-900 bg-opacity-80 flex flex-col items-center justify-center p-4 sm:p-6 opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300">
 
-<h3 className="text-3xl font-bold mb-2 text-teal-400 text-center">
+<h3 className="text-xl sm:text-2xl lg:text-3xl font-bold mb-2 text-teal-400 text-center">
 {project.title}
 </h3>
 
-<p className="text-lg font-semibold text-gray-300 mb-3">
+<p className="text-base sm:text-lg font-semibold text-gray-300 mb-3 text-center">
 {project.category}
 </p>
 
-<p className="text-base text-gray-200 text-center mb-6">
+<p className="text-sm sm:text-base text-gray-200 text-center mb-4 sm:mb-6">
 {project.description}
 </p>
 
@@ -164,27 +164,27 @@ Know More →
 </div>
 
 {selectedProject && (
-<div className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center p-4 z-50">
+<div className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center p-3 sm:p-4 z-50">
 
-<div className="bg-gray-800 text-white rounded-xl p-8 max-w-3xl w-full relative shadow-3xl">
+<div className="bg-gray-800 text-white rounded-xl p-4 sm:p-8 max-h-[90vh] overflow-y-auto max-w-3xl w-full relative shadow-3xl">
 
-<h2 className="text-4xl font-bold mb-4 text-teal-400 border-b border-gray-700 pb-2">
+<h2 className="text-xl sm:text-3xl lg:text-4xl font-bold mb-4 text-teal-400 border-b border-gray-700 pb-2">
 {selectedProject.title}
 </h2>
 
 <img
 src={selectedProject.imageUrl}
 alt={selectedProject.title}
-className="w-full h-56 object-cover rounded-lg mb-6"
+className="w-full h-36 sm:h-56 object-cover rounded-lg mb-6"
 />
 
-<p className="text-gray-200 text-lg leading-relaxed">
+<p className="text-gray-200 text-base sm:text-lg leading-relaxed">
 {selectedProject.fullDetails}
 </p>
 
 <button
 onClick={()=>setSelectedProject(null)}
-className="absolute top-3 right-3 text-gray-400 hover:text-teal-400 text-4xl"
+className="absolute top-2 right-2 sm:top-3 sm:right-3 text-gray-400 hover:text-teal-400 text-3xl sm:text-4xl"
 >
 &times;
 </button>
